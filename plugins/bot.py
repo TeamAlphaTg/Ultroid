@@ -103,7 +103,18 @@ The Ultroid Userbot
 """
 
 in_alive = "{}\n\n🌀 <b>Ultroid Version -><b> <code>{}</code>\n🌀 <b>PyUltroid -></b> <code>{}</code>\n🌀 <b>Python -></b> <code>{}</code>\n🌀 <b>Uptime -></b> <code>{}</code>\n🌀 <b>Branch -></b> [ {} ]\n\n• <b>Join @TheUltroid</b>"
-
+    reply_markup = InlineKeyboardMarkup(
+        [
+            [
+                InlineKeyboardButton('✨✨TeamAlpha✨✨', url='https://github.com/TeamAlphaTg'),
+                InlineKeyboardButton('✨✨ Devs✨✨ ', url='https://github.com/TeamAlphaTg')
+            ],
+            [
+                InlineKeyboardButton('✨✨ Owner  ✨✨', url='https://t.me/Gishankrishka1'),
+            ]
+        ]
+    )
+    await msg.reply(out, reply_markup=reply_markup)
 
 @callback("alive")
 async def alive(event):
